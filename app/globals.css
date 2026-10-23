@@ -1,0 +1,544 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* SF Pro Display - Local Font */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e1e1e;
+  --card: #f5f5f5;
+  --card-foreground: #1e1e1e;
+  --popover: #ffffff;
+  --popover-foreground: #1e1e1e;
+  --primary: #0a0a0a;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #1e1e1e;
+  --muted: #f5f5f5;
+  --muted-foreground: #757575;
+  --accent: #f0f0f0;
+  --accent-foreground: #1e1e1e;
+  --destructive: #f44336;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #737373;
+  --chart-1: #0a0a0a;
+  --chart-2: #737373;
+  --chart-3: #ff9500;
+  --chart-4: #af52de;
+  --chart-5: #ff3b30;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1e1e1e;
+  --sidebar-primary: #0a0a0a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0f0f0;
+  --sidebar-accent-foreground: #1e1e1e;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #737373;
+  --font-sans:
+    Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "Fira Code", monospace;
+  --radius: 0.5rem;
+  --shadow-x: 0px;
+  --shadow-y: 2px;
+  --shadow-blur: 10px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.05;
+  --shadow-color: #000000;
+  --shadow-2xs: 0px 2px 10px 0px hsl(0 0% 0% / 0.03);
+  --shadow-xs: 0px 2px 10px 0px hsl(0 0% 0% / 0.03);
+  --shadow-sm:
+    0px 2px 10px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow:
+    0px 2px 10px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow-md:
+    0px 2px 10px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05);
+  --shadow-lg:
+    0px 2px 10px 0px hsl(0 0% 0% / 0.05), 0px 4px 6px -1px hsl(0 0% 0% / 0.05);
+  --shadow-xl:
+    0px 2px 10px 0px hsl(0 0% 0% / 0.05), 0px 8px 10px -1px hsl(0 0% 0% / 0.05);
+  --shadow-2xl: 0px 2px 10px 0px hsl(0 0% 0% / 0.13);
+  --tracking-normal: -0.01em;
+  --spacing: 0.25rem;
+  --nav-cta-bg: #ffffff;
+  --nav-cta-fg: #0a0a0a;
+  --nav-cta-glow: rgba(255, 255, 255, 0.5);
+  --bento-glow-rgb: 255, 255, 255;
+  --nav-cta-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --nav-cta-hover-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 3px 5px var(--nav-cta-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --card-highlight-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.06);
+  --card-edge-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --preview-ambient-glow: rgba(0, 0, 0, 0.04);
+  --preview-shell-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 24px 64px rgba(0, 0, 0, 0.2);
+  --canvas-control-surface: #ffffff;
+  --canvas-selection: #3b82f6;
+  --canvas-destructive: #ef4444;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #e0e0e0;
+  --card: #171717;
+  --card-foreground: #e0e0e0;
+  --popover: #171717;
+  --popover-foreground: #e0e0e0;
+  --primary: #ffffff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #e0e0e0;
+  --muted: #1f1f1f;
+  --muted-foreground: #a3a3a3;
+  --accent: #242424;
+  --accent-foreground: #ffffff;
+  --destructive: #ff453a;
+  --destructive-foreground: #ffffff;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: #a3a3a3;
+  --chart-1: #ffffff;
+  --chart-2: #a3a3a3;
+  --chart-3: #ff9f0a;
+  --chart-4: #bf5af2;
+  --chart-5: #ff453a;
+  --sidebar: #171717;
+  --sidebar-foreground: #e0e0e0;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #242424;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2a2a2a;
+  --sidebar-ring: #a3a3a3;
+  --font-sans:
+    Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "Fira Code", monospace;
+  --radius: 0.5rem;
+  --shadow-x: 0px;
+  --shadow-y: 4px;
+  --shadow-blur: 12px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.3;
+  --shadow-color: #000000;
+  --shadow-2xs: 0px 4px 12px 0px hsl(0 0% 0% / 0.15);
+  --shadow-xs: 0px 4px 12px 0px hsl(0 0% 0% / 0.15);
+  --shadow-sm:
+    0px 4px 12px 0px hsl(0 0% 0% / 0.3), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+  --shadow:
+    0px 4px 12px 0px hsl(0 0% 0% / 0.3), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+  --shadow-md:
+    0px 4px 12px 0px hsl(0 0% 0% / 0.3), 0px 2px 4px -1px hsl(0 0% 0% / 0.3);
+  --shadow-lg:
+    0px 4px 12px 0px hsl(0 0% 0% / 0.3), 0px 4px 6px -1px hsl(0 0% 0% / 0.3);
+  --shadow-xl:
+    0px 4px 12px 0px hsl(0 0% 0% / 0.3), 0px 8px 10px -1px hsl(0 0% 0% / 0.3);
+  --shadow-2xl: 0px 4px 12px 0px hsl(0 0% 0% / 0.75);
+  --nav-cta-bg: #ffffff;
+  --nav-cta-fg: #0a0a0a;
+  --nav-cta-glow: rgba(255, 255, 255, 0.5);
+  --nav-cta-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --nav-cta-hover-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 3px 5px var(--nav-cta-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --card-highlight-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --card-edge-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+  --preview-ambient-glow: rgba(255, 255, 255, 0.04);
+  --preview-shell-shadow:
+    0 1px 2px rgba(255, 255, 255, 0.04),
+    0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-normal: var(--tracking-normal);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+    letter-spacing: var(--tracking-normal);
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /* Marketing nav: viewport scrolling so fixed header participates in overscroll bounce */
+  body.nav-overscroll {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  /* Improve touch targets on mobile */
+  button,
+  a,
+  [role="button"] {
+    @apply touch-manipulation;
+  }
+
+  @media (max-width: 768px) {
+    button:not([class*="size"]):not([class*="h-"]),
+    a:not([class*="size"]):not([class*="h-"]),
+    [role="button"]:not([class*="size"]):not([class*="h-"]) {
+      min-height: 44px;
+    }
+  }
+
+  /* Prevent iOS zoom on focus — only enforce 16px on mobile */
+  @media (max-width: 768px) {
+    input,
+    textarea,
+    select {
+      font-size: 16px;
+    }
+  }
+
+  * {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  @media (max-width: 768px) {
+    button,
+    a,
+    [role="button"] {
+      touch-action: manipulation;
+    }
+  }
+
+  /* Scrollbar - minimal */
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-foreground);
+  }
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Marquee animation */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .canvas-stage-presize {
+    width: min(
+      var(--stage-w),
+      max(100vw - 32px, 1px),
+      max(100dvh - 168px, 1px) * var(--stage-ratio)
+    );
+    aspect-ratio: var(--stage-ratio);
+  }
+
+  @media (min-width: 1024px) {
+    .canvas-stage-presize {
+      width: min(
+        var(--stage-w),
+        max(100vw - 576px, 320px),
+        max(100vh - 156px, 160px) * var(--stage-ratio)
+      );
+    }
+  }
+
+  /* Editor stage: soft breathe while empty / loading (size stays fixed) */
+  @keyframes canvas-stage-breathe {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.88;
+    }
+  }
+
+  .canvas-stage-breathe {
+    animation: canvas-stage-breathe 2.4s ease-in-out infinite;
+  }
+
+  @keyframes canvas-stage-shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .canvas-stage-shimmer {
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.14) 50%,
+      transparent 60%
+    );
+    animation: canvas-stage-shimmer 1.35s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .canvas-stage-breathe,
+    .canvas-stage-shimmer {
+      animation: none;
+    }
+  }
+
+  @keyframes store-loading-card {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes store-loading-sheen {
+    0%,
+    35% {
+      transform: translateX(-220%);
+    }
+    75%,
+    100% {
+      transform: translateX(320%);
+    }
+  }
+
+  .store-loading-card {
+    animation: store-loading-card 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .store-loading-sheen {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, var(--foreground) 5%, transparent),
+      transparent
+    );
+    animation: store-loading-sheen 1.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .store-loading-card,
+    .store-loading-sheen {
+      animation: none;
+    }
+  }
+}
+
+.landing-heading {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.72) 42%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Moveable control box — must be outside @layer base so it isn't
+   de-prioritised by Tailwind v4's cascade layers. The parent container
+   has pointer-events:none; this ensures the handles stay interactive. */
+.moveable-control-box,
+.moveable-control-box * {
+  pointer-events: auto !important;
+}
+
+.store-text-size-input {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.store-text-size-input::-webkit-inner-spin-button,
+.store-text-size-input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+@media (max-width: 1023px) {
+  .mobile-editor-drawer button:not([role="switch"]):not([role="slider"]),
+  .mobile-editor-drawer input:not([type="checkbox"]):not([type="color"]),
+  .mobile-editor-drawer select {
+    min-height: 44px;
+  }
+
+  .mobile-editor-drawer input,
+  .mobile-editor-drawer textarea,
+  .mobile-editor-drawer select {
+    min-width: 0;
+    font-size: 16px;
+  }
+}

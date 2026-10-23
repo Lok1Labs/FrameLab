@@ -1,0 +1,96 @@
+// Modified for FrameLab branding and maintainer contacts.
+'use client';
+
+import * as React from 'react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
+  SidebarFooter,
+} from '@/components/ui/sidebar';
+import { useImageStore } from '@/lib/store';
+import { ExportDialog } from '@/components/canvas/dialogs/ExportDialog';
+import { StyleTabs } from './style-tabs';
+import { Button } from '@/components/ui/button';
+import { Download04Icon, GithubIcon } from 'hugeicons-react';
+import { useExport } from '@/hooks/useExport';
+
+export function SidebarLeft({
+  ...props
+}: React.ComponentProps<typeof Sidebar>) {
+  const { 
+    uploadedImageUrl, 
+    selectedAspectRatio,
+  } = useImageStore();
+  const [exportDialogOpen, setExportDialogOpen] = React.useState(false);
+
+  const {
+    settings: exportSettings,
+    isExporting,
+    progress,
+    updateScale,
+    updateFormat,
+    updateQualityPreset,
+    exportImage,
+  } = useExport(selectedAspectRatio);
+
+  return (
+    <>
+      <Sidebar 
+        collapsible="none"
+        className="border-r border-sidebar-border bg-sidebar backdrop-blur-xl h-screen flex flex-col" 
+        {...props}
+      >
+        <SidebarHeader className="p-4 sm:p-5 border-b border-sidebar-border min-w-0 bg-sidebar/50 shrink-0">
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
+              <Button
+                onClick={() => setExportDialogOpen(true)}
+                disabled={!uploadedImageUrl}
+                className="w-full h-10 justify-center gap-2.5 rounded-lg bg-background hover:bg-accent text-foreground border border-border hover:border-border/80  transition-all duration-200 font-semibold text-sm px-4 overflow-hidden"
+                variant="outline"
+                size="sm"
+              >
+                <Download04Icon className="size-4 shrink-0" />
+                <span className="truncate">Download</span>
+              </Button>
+            </div>
+          </div>
+        </SidebarHeader>
+        <SidebarContent className="px-4 sm:px-5 md:px-6 py-5 sm:py-6 md:py-7 space-y-5 sm:space-y-6 overflow-x-hidden overflow-y-auto flex-1 min-h-0">
+          <StyleTabs />
+        </SidebarContent>
+        <SidebarFooter className="p-4 sm:p-5 border-t border-sidebar-border">
+          <a
+            href="https://github.com/Lok1Labs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
+            <Button
+              variant="outline"
+              className="w-full h-10 justify-center gap-2.5 rounded-lg bg-background hover:bg-accent text-foreground border border-border hover:border-border/80  transition-all duration-200 font-medium text-sm px-4 overflow-hidden"
+            >
+              <GithubIcon className="size-4 shrink-0" />
+              <span className="truncate">Proudly Open Source</span>
+            </Button>
+          </a>
+        </SidebarFooter>
+      </Sidebar>
+
+      <ExportDialog
+        open={exportDialogOpen}
+        onOpenChange={setExportDialogOpen}
+        onExport={() => exportImage().then(() => {})}
+        scale={exportSettings.scale}
+        format={exportSettings.format}
+        qualityPreset={exportSettings.qualityPreset}
+        isExporting={isExporting}
+        progress={progress}
+        onScaleChange={updateScale}
+        onFormatChange={updateFormat}
+        onQualityPresetChange={updateQualityPreset}
+      />
+    </>
+  );
+}

@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { defineConfig, env } from "prisma/config";
+import { defineConfig } from "prisma/config";
 
 export default defineConfig({
   schema: "prisma/schema.prisma",
@@ -8,6 +8,8 @@ export default defineConfig({
   },
   engine: "classic",
   datasource: {
-    url: env("DATABASE_URL"),
+    // Client generation does not connect to the database. Cache/migration jobs
+    // still need a real DATABASE_URL when they run.
+    url: process.env.DATABASE_URL ?? "",
   },
 });

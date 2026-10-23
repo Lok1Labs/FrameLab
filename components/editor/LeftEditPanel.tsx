@@ -1,0 +1,153 @@
+"use client";
+
+import * as React from "react";
+import {
+  SlidersHorizontalIcon,
+  ColorsIcon,
+  LayersLogoIcon,
+  Image01Icon,
+  Globe02Icon,
+  SmartPhone01Icon,
+} from "hugeicons-react";
+import {
+  StyleSection,
+  BorderSection,
+  ShadowSection,
+  BackgroundSection,
+  DepthSection,
+  ImageOverlaySection,
+  AnnotateSection,
+  TextSection,
+  SettingsSection,
+  BrowserMockupSection,
+  DeviceFramesSection,
+  ImageEnhanceSection,
+  BackgroundEffectsSection,
+} from "./sections";
+import { useImageStore } from "@/lib/store";
+import { SegmentedControl } from "@/components/ui/segmented-control";
+
+type LeftTabType = "edit" | "background" | "depth";
+
+const leftTabs: { id: LeftTabType; icon: React.ReactNode; label: string }[] = [
+  { id: "edit", icon: <SlidersHorizontalIcon size={14} />, label: "Design" },
+  { id: "background", icon: <ColorsIcon size={14} />, label: "BG" },
+  { id: "depth", icon: <LayersLogoIcon size={14} />, label: "Layers" },
+];
+
+function ModeSegmentedControl(): React.JSX.Element {
+  const editorMode = useImageStore((s) => s.editorMode);
+  const setEditorMode = useImageStore((s) => s.setEditorMode);
+
+  return (
+    <SegmentedControl
+      value={editorMode}
+      onChange={(id) => setEditorMode(id as "screenshot" | "browser" | "device")}
+      options={[
+        {
+          id: "screenshot",
+          label: "Image",
+          icon: <Image01Icon size={14} />,
+          ariaLabel: "Image",
+        },
+        {
+          id: "browser",
+          label: "Browser",
+          icon: <Globe02Icon size={14} />,
+          ariaLabel: "Browser",
+        },
+        {
+          id: "device",
+          label: "Device",
+          icon: <SmartPhone01Icon size={14} />,
+          ariaLabel: "Device",
+        },
+      ]}
+    />
+  );
+}
+
+export function LeftEditPanel() {
+  const editorMode = useImageStore((s) => s.editorMode);
+  const [activeTab, setActiveTab] = React.useState<LeftTabType>("edit");
+
+  const [contentKey, setContentKey] = React.useState<LeftTabType>(activeTab);
+  const [transitioning, setTransitioning] = React.useState(false);
+
+  React.useEffect(() => {
+    if (activeTab !== contentKey) {
+      setTransitioning(true);
+      const timeout = setTimeout(() => {
+        setContentKey(activeTab);
+        setTransitioning(false);
+      }, 150);
+      return () => clearTimeout(timeout);
+    }
+  }, [activeTab, contentKey]);
+
+  return (
+    <div className="w-[260px] h-full bg-background flex flex-col overflow-hidden border-r border-foreground/10 relative shrink-0">
+      <div className="px-3 pt-2.5 pb-1 shrink-0">
+        <ModeSegmentedControl />
+      </div>
+
+      <div className="px-3 py-2.5 border-b border-foreground/10 shrink-0">
+        <SegmentedControl
+          value={activeTab}
+          onChange={(id) => setActiveTab(id as LeftTabType)}
+          options={leftTabs.map((tab) => ({
+            id: tab.id,
+            label: tab.label,
+            icon: tab.icon,
+            ariaLabel: tab.label,
+          }))}
+        />
+      </div>
+
+      <div className="flex-1 overflow-y-auto scrollbar-hide">
+        <div
+          className="p-4 transition-[opacity,transform] duration-150 ease-out motion-reduce:transition-none"
+          style={{
+            opacity: transitioning ? 0 : 1,
+            transform: transitioning ? "translateY(4px)" : "translateY(0)",
+          }}
+        >
+          {contentKey === "edit" && (
+            <div className="space-y-1">
+              {editorMode === "device" ? (
+                <DeviceFramesSection />
+              ) : editorMode === "browser" ? (
+                <BrowserMockupSection />
+              ) : (
+                <>
+                  <StyleSection />
+                  <BorderSection />
+                  <ImageEnhanceSection />
+                </>
+              )}
+              {editorMode !== "device" ? (
+                <>
+                  <ShadowSection />
+                  <ImageOverlaySection />
+                  <AnnotateSection />
+                  <TextSection />
+                  <SettingsSection />
+                </>
+              ) : null}
+            </div>
+          )}
+
+          {contentKey === "background" && (
+            <div className="space-y-1">
+              <BackgroundEffectsSection />
+              <BackgroundSection />
+            </div>
+          )}
+
+          {contentKey === "depth" && <DepthSection />}
+        </div>
+      </div>
+
+    </div>
+  );
+}

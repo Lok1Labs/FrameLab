@@ -34,11 +34,10 @@ Requires Node.js 20.9+ and npm.
 ```bash
 cd path/to/framelab
 npm ci
-printf 'DATABASE_URL="postgresql://localhost:5432/screenshot_studio"\n' > .env
 npm run dev
 ```
 
-Open [localhost:3000](http://localhost:3000). The browser editor needs no running database; `DATABASE_URL` is required by Prisma during startup and builds. Server-side screenshot caching requires PostgreSQL and R2 credentials; see the [cache configuration](./lib/screenshot-cache.ts).
+Open [localhost:3000](http://localhost:3000). The browser editor and production build work without `DATABASE_URL`. Server-side screenshot caching is optional and requires PostgreSQL (`DATABASE_URL`) and R2 credentials; see the [cache configuration](./lib/screenshot-cache.ts). Configure the database URL in your hosting environment rather than committing it to the repository.
 
 ## Contribute
 

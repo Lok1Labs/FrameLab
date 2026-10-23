@@ -1,0 +1,524 @@
+
+> screenshot-studio@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ editor workspaces are ad free with or without a locale prefix (1.1252ms)
+✔ content pages that share a prefix with an editor route still carry ads (0.2438ms)
+✔ parseAccept reads media ranges and q values (2.3385ms)
+✔ qualityFor honours exact, subtype wildcard, and full wildcard matches (0.5236ms)
+✔ prefersMarkdown only diverts explicit, higher-ranked markdown requests (0.4167ms)
+✔ isUnacceptable is true only when every supported type is ruled out (0.2218ms)
+✔ agent page registry is unique and rooted (0.6188ms)
+✔ normalizeAgentPath strips locale prefixes and trailing slashes (0.2085ms)
+✔ rendered markdown carries a heading, canonical URL, and resources (0.4618ms)
+✔ 404 and 406 markdown bodies guide an agent to a next step (0.27ms)
+✔ llms.txt files advertise the developer resources (0.2604ms)
+✔ openapi document is a valid 3.1 shape (0.2427ms)
+✔ every operation is function-calling ready (0.4052ms)
+✔ every schema reference resolves (0.3503ms)
+✔ error envelope is stable and backward compatible (0.2033ms)
+✔ apiError serialises extras and headers (4.8602ms)
+✔ methodNotAllowed advertises Allow and notFoundJson points at the spec (3.3386ms)
+✔ agent-facing copy points at the canonical www host and the brand X account (0.488ms)
+✔ agent-facing copy does not claim images never reach a server (0.7823ms)
+✔ animated templates reference valid visual and motion presets (1.4714ms)
+✔ Close Pan keeps a close crop while moving right to left for the full timeline (0.2724ms)
+✔ animated template timelines are editable and internally linked (0.4225ms)
+✔ image templates have unique identities and valid compositions (1.7358ms)
+✔ checkFile accepts PNG, JPG, WebP, and AVIF up to 50 MB (1.1175ms)
+✔ assessMask rejects wrong lengths and non-finite values (0.9159ms)
+✔ assessMask flags empty or flat masks that a faulty GPU can return (0.2303ms)
+✔ maskToAlpha converts confidence to 8-bit alpha untouched (0.2257ms)
+✔ sharpenAlpha hardens the edge and leaves colour channels alone (0.3177ms)
+✔ cutoutFileName swaps the extension for -transparent.png (0.4044ms)
+✔ forwardOnly clamps and never moves backwards (0.2274ms)
+✔ mosaic grid covers the whole region from its top-left corner (2.0114ms)
+✔ switching a blur region to mosaic can be undone (3.2582ms)
+✔ browserDisplayUrl shows a captured page the way a browser address bar does (1.1572ms)
+✔ autosave never replaces the saved canvas background (38.4333ms)
+✔ device library ships licensed device assets (1.3358ms)
+✔ legacy draft devices migrate to supported catalog definitions (0.2471ms)
+✔ legacy draft device geometry migrates from pixels to normalized canvas coordinates (0.6885ms)
+✔ a device scene is renderable only when a supported device is visible (13.5905ms)
+✔ device panel leaves change mode when its selected mockup is cleared (0.6196ms)
+✔ drafts store inherited device images once without changing custom screens (3.8294ms)
+✔ device screen uploads use durable data URLs instead of leaking blob URLs (5.8887ms)
+✔ device library includes all six launch layouts within the device limit (0.351ms)
+✔ angled licensed devices align their empty state to the screen plane (0.386ms)
+✔ layout application preserves screen content and arranges existing devices (0.733ms)
+✔ center stage keeps portrait phones inside a safe canvas scale (0.249ms)
+✔ leaving a layout restores the prior arrangement without losing a replaced screen (0.3847ms)
+✔ product suite creates one laptop, phone, and watch without losing content (0.2863ms)
+✔ product suite preserves independent images while matching device families (0.2477ms)
+✔ iphone-17-pro-front extends the mask without moving or resizing the screenshot (22.5299ms)
+✔ iphone-17-front extends the mask without moving or resizing the screenshot (0.9324ms)
+✔ global image drops yield to device screen drop targets (0.985ms)
+✔ global image drops yield to local tool drop zones (0.2891ms)
+✔ Chrome Web Store presets resolve to exact requested pixel sizes (8.3054ms)
+✔ text can be created and undone without an uploaded image (3.1652ms)
+✔ text dragging uses displayed canvas dimensions and bounds its center (0.5035ms)
+✔ new motion presets have unique IDs, visible categories and finite playable keyframes (3.2937ms)
+✔ editor-only device content is excluded from exports (0.9744ms)
+✔ device crop rings are removed from export clones (1.0719ms)
+✔ the served FFmpeg worker path matches the installed @ffmpeg/ffmpeg version (1.0202ms)
+✖ the unbundled FFmpeg worker files are identical to the installed package (7.7608ms)
+✔ every guide has a cover image (1.4766ms)
+✔ aspectRatioOf survives a zero-height image (1.6634ms)
+✔ quarter turns swap width and height (0.9664ms)
+✔ normalizeAngle snaps onto the four quarter turns (0.2351ms)
+✔ percentage resize scales both axes and rounds to whole pixels (0.2953ms)
+✔ locked resize derives the axis the user did not type (0.5406ms)
+✔ locked resize with both axes fits inside the box instead of stretching (5.8335ms)
+✔ unlocked resize stretches to exactly what was typed (0.3271ms)
+✔ upscaling is clamped to the source unless explicitly allowed (0.5749ms)
+✔ a resize with no target returns the source size (5.8747ms)
+✔ matchLockedAxis keeps the ratio true as the user types (0.5205ms)
+✔ clampCropRect slides an out-of-bounds rect back inside (0.3879ms)
+✔ clampCropRect trims a rect larger than the image (0.1477ms)
+✔ applyCropAspectRatio reshapes around the current centre (0.217ms)
+✔ centeredCropForRatio returns the largest fitting rect (0.1374ms)
+✔ polygonBounds grows a freehand shape outward to whole pixels (0.2091ms)
+✔ polygonBounds clamps a stroke that runs off the image (0.2203ms)
+✔ polygonBounds rejects clicks and lines too thin to crop (0.2052ms)
+✔ appendPathPoint skips points too close to the last one (0.3887ms)
+✔ clampPoint pins a point to the image edge (0.1049ms)
+✔ polygonArea measures a shape whichever way it winds (0.1292ms)
+✔ pointInPolygon finds points inside and outside a triangle (0.1279ms)
+✔ a loop that ends near its start is a lasso (0.3356ms)
+✔ a straight line in the middle encloses nothing and is rejected (0.1095ms)
+✔ a corner-to-corner diagonal splits the image into two triangles (0.5313ms)
+✔ an edge-to-edge cut snaps its ends to the border and keeps the clicked side (0.2658ms)
+✔ a line that only skims an edge is not offered as a cut (0.3335ms)
+✔ fitWithin shrinks to the box but never enlarges (0.1842ms)
+✔ format metadata matches what canvas encoders expect (0.1943ms)
+✔ formatFromMime is case-insensitive and rejects what we cannot encode (0.1175ms)
+✔ clampQuality bounds lossy values and ignores quality for lossless (0.1071ms)
+✔ compression levels trade quality for size in the right direction (0.3017ms)
+✔ formatBytes reads like a file manager (0.1806ms)
+✔ savingsPercent reports growth as a negative saving (0.0954ms)
+✔ filenames are stripped of characters that break zips and downloads (0.2048ms)
+✔ baseName keeps dotted names and leading-dot files intact (0.1865ms)
+✔ swapExtension and outputFilename produce the download name (10.8516ms)
+✔ uniqueFilename keeps batch zip entries from overwriting each other (0.222ms)
+✔ batchArchiveName is a safe zip name (0.1207ms)
+✔ resolveOutputFormat keeps the source format on auto (0.1633ms)
+✔ resolveOutputFormat falls back to PNG for decode-only sources (0.1019ms)
+✔ each batch engine only sends the pipeline the options it uses (0.2867ms)
+✔ resize and rotate re-encode at the shared high-quality default (0.1163ms)
+✔ compress quality follows the preset level, not the manual slider (0.1094ms)
+✔ convert honours the manual quality slider only when it is enabled (0.09ms)
+✔ output names only gain a suffix when they would overwrite the source (0.2023ms)
+✔ output names keep the extension the source arrived with (0.2995ms)
+✔ a changed page submits only its own URL (2.7664ms)
+✔ a data file submits every page that imports it, through cycles and dynamic routes (0.7723ms)
+✔ the nav and footer never pull in every page (0.488ms)
+✔ files that reach more than half the sitemap are skipped as site-wide (0.3444ms)
+✔ files outside the import graph submit nothing (0.2673ms)
+✔ undo keeps image URLs readable after replacement, removal, and clearing (51.4007ms)
+✔ overlay selection stays outside undo history and cannot target deleted images (5.5474ms)
+✔ overlays without tilt keep rendering with no 3D transform (1.3089ms)
+✔ tilted overlays rotate around X then Y (0.3195ms)
+✔ overlay shadows use the same drop-shadow as the main image (0.8444ms)
+✔ shadow colors parse from hex, legacy rgba and modern space-separated rgb (1.3793ms)
+✔ overlay images keep their aspect ratio inside the square overlay box (0.3053ms)
+✔ shared shadow keeps offsets, spread and explicit opacity for existing main-image settings (0.175ms)
+✔ the default background uses the bundled image even with R2 configured (2.4729ms)
+✔ other assets retain their R2 proxy and local fallback paths (0.3767ms)
+✔ custom background URLs are unchanged (0.2421ms)
+✔ a flat black or white capture counts as blank (51.8737ms)
+✔ a capture with any real content is not blank (28.0898ms)
+✔ bytes that are not an image never count as blank (0.9581ms)
+✔ the App Store profile exposes the exact portrait export size (1.9977ms)
+✔ six coordinated templates resolve repeatable layout sequences (0.5055ms)
+✔ App Store projects cap slides at the supported maximum (1.0609ms)
+✔ store history caps retained image data instead of retaining every replacement (0.6786ms)
+✔ store history keeps lightweight edits while enforcing its entry limit (2.0108ms)
+✔ store history groups only repeated edits to the same field (0.9359ms)
+✔ a new Store Screenshots visit offers a complete editable starter set (1.0239ms)
+✔ starting from scratch creates one simple customizable mockup (1.8715ms)
+✔ store image validation rejects unsupported and oversized uploads (0.9207ms)
+✔ store image budgeting counts slide, background, and overlay data (0.4785ms)
+✔ multi-file uploads reject a batch before reading beyond the available project budget (14.3173ms)
+✔ duplicating a slide preserves its design while creating a new identity (0.8674ms)
+✔ device slot helpers keep Duo mockup controls independent (0.5026ms)
+✔ switching a free screen back to an iPhone clamps its position (1.0911ms)
+✔ deleting the final slide signals that the saved project must be removed (0.4082ms)
+✔ deleting a slide selects the nearest remaining slide (0.2901ms)
+✔ resetting positions preserves the slide layout, content, and image (0.4592ms)
+✔ keyboard reordering moves one slide at a time and keeps it selected (0.2543ms)
+✔ saved projects are normalized before the editor uses them (0.9046ms)
+✔ unsupported future projects and empty data are ignored safely (0.1363ms)
+✔ segmented controls expose toggle buttons instead of incomplete tab semantics (7.7227ms)
+✔ collapsed editor sections hide their controls and connect the disclosure to its content (15.6882ms)
+✔ expanded editor sections expose all content without clipping long mobile panels (1.1409ms)
+✔ checkFile accepts video MIME types and extensions browsers leave untyped (1.3056ms)
+✔ file names keep the base name and give FFmpeg a neutral input name (0.2696ms)
+✔ target bitrate fits the size with headroom and leaves room for audio (0.4734ms)
+✔ a target too small for the duration is refused, with a usable minimum (0.2215ms)
+✔ clampTargetMb rejects junk and keeps one decimal (0.2253ms)
+✔ scaleFilter caps the short side and never upscales (0.2228ms)
+✔ level mode uses CRF, keeps audio, and writes a faststart MP4 (0.3775ms)
+✔ the source frame timing is kept instead of padding to a constant rate (0.2119ms)
+✔ audio can be shrunk or dropped, and silent videos never map audio (0.2211ms)
+✔ thread counts stay inside what the WASM core handles (1.0511ms)
+✔ target mode runs two passes at the target bitrate instead of CRF (0.3333ms)
+✔ videos without audio give the whole target to the picture (0.213ms)
+✔ target mode refuses impossible targets and unknown durations (0.3729ms)
+✔ parseProbeLog reads duration, size, and audio from FFmpeg output (0.6696ms)
+✔ parseProbeLog swaps dimensions for rotated phone video (0.2624ms)
+✔ parseProbeLog handles a missing duration and files without video (0.2046ms)
+✔ parseProgressTime reads encoder status lines (0.2292ms)
+✔ formatDuration prints minutes and hours (0.1778ms)
+ℹ tests 167
+ℹ suites 0
+ℹ pass 166
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2344.7332
+
+✖ failing tests:
+
+test at tests\ffmpeg-worker.test.ts:2:1594
+✖ the unbundled FFmpeg worker files are identical to the installed package (7.7608ms)
+  AssertionError [ERR_ASSERTION]: public/ffmpeg/0.12.15/worker.js is out of date; copy it from node_modules/@ffmpeg/ffmpeg/dist/esm
+  + actual - expected
+  
+  + '/// <reference no-default-lib="true" />\r\n' +
+  +   '/// <reference lib="esnext" />\r\n' +
+  +   '/// <reference lib="webworker" />\r\n' +
+  +   'import { CORE_URL, FFMessageType } from "./const.js";\r\n' +
+  +   'import { ERROR_UNKNOWN_MESSAGE_TYPE, ERROR_NOT_LOADED, ERROR_IMPORT_FAILURE, } from "./errors.js";\r\n' +
+  +   'let ffmpeg;\r\n' +
+  +   'const load = async ({ coreURL: _coreURL, wasmURL: _wasmURL, workerURL: _workerURL, }) => {\r\n' +
+  +   '    const first = !ffmpeg;\r\n' +
+  +   '    try {\r\n' +
+  +   '        if (!_coreURL)\r\n' +
+  +   '            _coreURL = CORE_URL;\r\n' +
+  +   '        // when web worker type is `classic`.\r\n' +
+  +   '        importScripts(_coreURL);\r\n' +
+  +   '    }\r\n' +
+  +   '    catch {\r\n' +
+  +   '        if (!_coreURL || _coreURL === CORE_URL)\r\n' +
+  +   "            _coreURL = CORE_URL.replace('/umd/', '/esm/');\r\n" +
+  +   '        // when web worker type is `module`.\r\n' +
+  +   '        self.createFFmpegCore = (await import(\r\n' +
+  +   '        /* @vite-ignore */ /* webpackIgnore: true */ _coreURL)).default;\r\n' +
+  +   '        if (!self.createFFmpegCore) {\r\n' +
+  +   '            throw ERROR_IMPORT_FAILURE;\r\n' +
+  +   '        }\r\n' +
+  +   '    }\r\n' +
+  +   '    const coreURL = _coreURL;\r\n' +
+  +   '    const wasmURL = _wasmURL ? _wasmURL : _coreURL.replace(/.js$/g, ".wasm");\r\n' +
+  +   '    const workerURL = _workerURL\r\n' +
+  +   '        ? _workerURL\r\n' +
+  +   '        : _coreURL.replace(/.js$/g, ".worker.js");\r\n' +
+  +   '    ffmpeg = await self.createFFmpegCore({\r\n' +
+  +   '        // Fix `Overload resolution failed.` when using multi-threaded ffmpeg-core.\r\n' +
+  +   '        // Encoded wasmURL and workerURL in the URL as a hack to fix locateFile issue.\r\n' +
+  +   '        mainScriptUrlOrBlob: `${coreURL}#${btoa(JSON.stringify({ wasmURL, workerURL }))}`,\r\n' +
+  +   '    });\r\n' +
+  +   '    ffmpeg.setLogger((data) => self.postMessage({ type: FFMessageType.LOG, data }));\r\n' +
+  +   '    ffmpeg.setProgress((data) => self.postMessage({\r\n' +
+  +   '        type: FFMessageType.PROGRESS,\r\n' +
+  +   '        data,\r\n' +
+  +   '    }));\r\n' +
+  +   '    return first;\r\n' +
+  +   '};\r\n' +
+  +   'const exec = ({ args, timeout = -1 }) => {\r\n' +
+  +   '    ffmpeg.setTimeout(timeout);\r\n' +
+  +   '    ffmpeg.exec(...args);\r\n' +
+  +   '    const ret = ffmpeg.ret;\r\n' +
+  +   '    ffmpeg.reset();\r\n' +
+  +   '    return ret;\r\n' +
+  +   '};\r\n' +
+  +   'const ffprobe = ({ args, timeout = -1 }) => {\r\n' +
+  +   '    ffmpeg.setTimeout(timeout);\r\n' +
+  +   '    ffmpeg.ffprobe(...args);\r\n' +
+  +   '    const ret = ffmpeg.ret;\r\n' +
+  +   '    ffmpeg.reset();\r\n' +
+  +   '    return ret;\r\n' +
+  +   '};\r\n' +
+  +   'const writeFile = ({ path, data }) => {\r\n' +
+  +   '    ffmpeg.FS.writeFile(path, data);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   'const readFile = ({ path, encoding }) => ffmpeg.FS.readFile(path, { encoding });\r\n' +
+  +   '// TODO: check if deletion works.\r\n' +
+  +   'const deleteFile = ({ path }) => {\r\n' +
+  +   '    ffmpeg.FS.unlink(path);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   'const rename = ({ oldPath, newPath }) => {\r\n' +
+  +   '    ffmpeg.FS.rename(oldPath, newPath);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   '// TODO: check if creation works.\r\n' +
+  +   'const createDir = ({ path }) => {\r\n' +
+  +   '    ffmpeg.FS.mkdir(path);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   'const listDir = ({ path }) => {\r\n' +
+  +   '    const names = ffmpeg.FS.readdir(path);\r\n' +
+  +   '    const nodes = [];\r\n' +
+  +   '    for (const name of names) {\r\n' +
+  +   '        const stat = ffmpeg.FS.stat(`${path}/${name}`);\r\n' +
+  +   '        const isDir = ffmpeg.FS.isDir(stat.mode);\r\n' +
+  +   '        nodes.push({ name, isDir });\r\n' +
+  +   '    }\r\n' +
+  +   '    return nodes;\r\n' +
+  +   '};\r\n' +
+  +   '// TODO: check if deletion works.\r\n' +
+  +   'const deleteDir = ({ path }) => {\r\n' +
+  +   '    ffmpeg.FS.rmdir(path);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   'const mount = ({ fsType, options, mountPoint }) => {\r\n' +
+  +   '    const str = fsType;\r\n' +
+  +   '    const fs = ffmpeg.FS.filesystems[str];\r\n' +
+  +   '    if (!fs)\r\n' +
+  +   '        return false;\r\n' +
+  +   '    ffmpeg.FS.mount(fs, options, mountPoint);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   'const unmount = ({ mountPoint }) => {\r\n' +
+  +   '    ffmpeg.FS.unmount(mountPoint);\r\n' +
+  +   '    return true;\r\n' +
+  +   '};\r\n' +
+  +   'self.onmessage = async ({ data: { id, type, data: _data }, }) => {\r\n' +
+  +   '    const trans = [];\r\n' +
+  +   '    let data;\r\n' +
+  +   '    try {\r\n' +
+  +   '        if (type !== FFMessageType.LOAD && !ffmpeg)\r\n' +
+  +   '            throw ERROR_NOT_LOADED; // eslint-disable-line\r\n' +
+  +   '        switch (type) {\r\n' +
+  +   '            case FFMessageType.LOAD:\r\n' +
+  +   '                data = await load(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.EXEC:\r\n' +
+  +   '                data = exec(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.FFPROBE:\r\n' +
+  +   '                data = ffprobe(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.WRITE_FILE:\r\n' +
+  +   '                data = writeFile(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.READ_FILE:\r\n' +
+  +   '                data = readFile(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.DELETE_FILE:\r\n' +
+  +   '                data = deleteFile(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.RENAME:\r\n' +
+  +   '                data = rename(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.CREATE_DIR:\r\n' +
+  +   '                data = createDir(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.LIST_DIR:\r\n' +
+  +   '                data = listDir(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.DELETE_DIR:\r\n' +
+  +   '                data = deleteDir(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.MOUNT:\r\n' +
+  +   '                data = mount(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            case FFMessageType.UNMOUNT:\r\n' +
+  +   '                data = unmount(_data);\r\n' +
+  +   '                break;\r\n' +
+  +   '            default:\r\n' +
+  +   '                throw ERROR_UNKNOWN_MESSAGE_TYPE;\r\n' +
+  +   '        }\r\n' +
+  +   '    }\r\n' +
+  +   '    catch (e) {\r\n' +
+  +   '        self.postMessage({\r\n' +
+  +   '            id,\r\n' +
+  +   '            type: FFMessageType.ERROR,\r\n' +
+  +   '            data: e.toString(),\r\n' +
+  +   '        });\r\n' +
+  +   '        return;\r\n' +
+  +   '    }\r\n' +
+  +   '    if (data instanceof Uint8Array) {\r\n' +
+  +   '        trans.push(data.buffer);\r\n' +
+  +   '    }\r\n' +
+  +   '    self.postMessage({ id, type, data }, trans);\r\n' +
+  +   '};\r\n'
+  - '/// <reference no-default-lib="true" />\n' +
+  -   '/// <reference lib="esnext" />\n' +
+  -   '/// <reference lib="webworker" />\n' +
+  -   'import { CORE_URL, FFMessageType } from "./const.js";\n' +
+  -   'import { ERROR_UNKNOWN_MESSAGE_TYPE, ERROR_NOT_LOADED, ERROR_IMPORT_FAILURE, } from "./errors.js";\n' +
+  -   'let ffmpeg;\n' +
+  -   'const load = async ({ coreURL: _coreURL, wasmURL: _wasmURL, workerURL: _workerURL, }) => {\n' +
+  -   '    const first = !ffmpeg;\n' +
+  -   '    try {\n' +
+  -   '        if (!_coreURL)\n' +
+  -   '            _coreURL = CORE_URL;\n' +
+  -   '        // when web worker type is `classic`.\n' +
+  -   '        importScripts(_coreURL);\n' +
+  -   '    }\n' +
+  -   '    catch {\n' +
+  -   '        if (!_coreURL || _coreURL === CORE_URL)\n' +
+  -   "            _coreURL = CORE_URL.replace('/umd/', '/esm/');\n" +
+  -   '        // when web worker type is `module`.\n' +
+  -   '        self.createFFmpegCore = (await import(\n' +
+  -   '        /* @vite-ignore */ _coreURL)).default;\n' +
+  -   '        if (!self.createFFmpegCore) {\n' +
+  -   '            throw ERROR_IMPORT_FAILURE;\n' +
+  -   '        }\n' +
+  -   '    }\n' +
+  -   '    const coreURL = _coreURL;\n' +
+  -   '    const wasmURL = _wasmURL ? _wasmURL : _coreURL.replace(/.js$/g, ".wasm");\n' +
+  -   '    const workerURL = _workerURL\n' +
+  -   '        ? _workerURL\n' +
+  -   '        : _coreURL.replace(/.js$/g, ".worker.js");\n' +
+  -   '    ffmpeg = await self.createFFmpegCore({\n' +
+  -   '        // Fix `Overload resolution failed.` when using multi-threaded ffmpeg-core.\n' +
+  -   '        // Encoded wasmURL and workerURL in the URL as a hack to fix locateFile issue.\n' +
+  -   '        mainScriptUrlOrBlob: `${coreURL}#${btoa(JSON.stringify({ wasmURL, workerURL }))}`,\n' +
+  -   '    });\n' +
+  -   '    ffmpeg.setLogger((data) => self.postMessage({ type: FFMessageType.LOG, data }));\n' +
+  -   '    ffmpeg.setProgress((data) => self.postMessage({\n' +
+  -   '        type: FFMessageType.PROGRESS,\n' +
+  -   '        data,\n' +
+  -   '    }));\n' +
+  -   '    return first;\n' +
+  -   '};\n' +
+  -   'const exec = ({ args, timeout = -1 }) => {\n' +
+  -   '    ffmpeg.setTimeout(timeout);\n' +
+  -   '    ffmpeg.exec(...args);\n' +
+  -   '    const ret = ffmpeg.ret;\n' +
+  -   '    ffmpeg.reset();\n' +
+  -   '    return ret;\n' +
+  -   '};\n' +
+  -   'const ffprobe = ({ args, timeout = -1 }) => {\n' +
+  -   '    ffmpeg.setTimeout(timeout);\n' +
+  -   '    ffmpeg.ffprobe(...args);\n' +
+  -   '    const ret = ffmpeg.ret;\n' +
+  -   '    ffmpeg.reset();\n' +
+  -   '    return ret;\n' +
+  -   '};\n' +
+  -   'const writeFile = ({ path, data }) => {\n' +
+  -   '    ffmpeg.FS.writeFile(path, data);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   'const readFile = ({ path, encoding }) => ffmpeg.FS.readFile(path, { encoding });\n' +
+  -   '// TODO: check if deletion works.\n' +
+  -   'const deleteFile = ({ path }) => {\n' +
+  -   '    ffmpeg.FS.unlink(path);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   'const rename = ({ oldPath, newPath }) => {\n' +
+  -   '    ffmpeg.FS.rename(oldPath, newPath);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   '// TODO: check if creation works.\n' +
+  -   'const createDir = ({ path }) => {\n' +
+  -   '    ffmpeg.FS.mkdir(path);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   'const listDir = ({ path }) => {\n' +
+  -   '    const names = ffmpeg.FS.readdir(path);\n' +
+  -   '    const nodes = [];\n' +
+  -   '    for (const name of names) {\n' +
+  -   '        const stat = ffmpeg.FS.stat(`${path}/${name}`);\n' +
+  -   '        const isDir = ffmpeg.FS.isDir(stat.mode);\n' +
+  -   '        nodes.push({ name, isDir });\n' +
+  -   '    }\n' +
+  -   '    return nodes;\n' +
+  -   '};\n' +
+  -   '// TODO: check if deletion works.\n' +
+  -   'const deleteDir = ({ path }) => {\n' +
+  -   '    ffmpeg.FS.rmdir(path);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   'const mount = ({ fsType, options, mountPoint }) => {\n' +
+  -   '    const str = fsType;\n' +
+  -   '    const fs = ffmpeg.FS.filesystems[str];\n' +
+  -   '    if (!fs)\n' +
+  -   '        return false;\n' +
+  -   '    ffmpeg.FS.mount(fs, options, mountPoint);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   'const unmount = ({ mountPoint }) => {\n' +
+  -   '    ffmpeg.FS.unmount(mountPoint);\n' +
+  -   '    return true;\n' +
+  -   '};\n' +
+  -   'self.onmessage = async ({ data: { id, type, data: _data }, }) => {\n' +
+  -   '    const trans = [];\n' +
+  -   '    let data;\n' +
+  -   '    try {\n' +
+  -   '        if (type !== FFMessageType.LOAD && !ffmpeg)\n' +
+  -   '            throw ERROR_NOT_LOADED; // eslint-disable-line\n' +
+  -   '        switch (type) {\n' +
+  -   '            case FFMessageType.LOAD:\n' +
+  -   '                data = await load(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.EXEC:\n' +
+  -   '                data = exec(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.FFPROBE:\n' +
+  -   '                data = ffprobe(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.WRITE_FILE:\n' +
+  -   '                data = writeFile(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.READ_FILE:\n' +
+  -   '                data = readFile(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.DELETE_FILE:\n' +
+  -   '                data = deleteFile(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.RENAME:\n' +
+  -   '                data = rename(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.CREATE_DIR:\n' +
+  -   '                data = createDir(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.LIST_DIR:\n' +
+  -   '                data = listDir(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.DELETE_DIR:\n' +
+  -   '                data = deleteDir(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.MOUNT:\n' +
+  -   '                data = mount(_data);\n' +
+  -   '                break;\n' +
+  -   '            case FFMessageType.UNMOUNT:\n' +
+  -   '                data = unmount(_data);\n' +
+  -   '                break;\n' +
+  -   '            default:\n' +
+  -   '                throw ERROR_UNKNOWN_MESSAGE_TYPE;\n' +
+  -   '        }\n' +
+  -   '    }\n' +
+  -   '    catch (e) {\n' +
+  -   '        self.postMessage({\n' +
+  -   '            id,\n' +
+  -   '            type: FFMessageType.ERROR,\n' +
+  -   '            data: e.toString(),\n' +
+  -   '        });\n' +
+  -   '        return;\n' +
+  -   '    }\n' +
+  -   '    if (data instanceof Uint8Array) {\n' +
+  -   '        trans.push(data.buffer);\n' +
+  -   '    }\n' +
+  -   '    self.postMessage({ id, type, data }, trans);\n' +
+  -   '};\n'
+  
+      at TestContext.<anonymous> (E:\FrameLab\screenshot-studio\tests\ffmpeg-worker.test.ts:17:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '/// <reference no-default-lib="true" />\r\n/// <reference lib="esnext" />\r\n/// <reference lib="webworker" />\r\nimport { CORE_URL, FFMessageType } from "./const.js";\r\nimport { ERROR_UNKNOWN_MESSAGE_TYPE, ERROR_NOT_LOADED, ERROR_IMPORT_FAILURE, } from "./errors.js";\r\nlet ffmpeg;\r\nconst load = async ({ coreURL: _coreURL, wasmURL: _wasmURL, workerURL: _workerURL, }) => {\r\n    const first = !ffmpeg;\r\n    try {\r\n        if (!_coreURL)\r\n            _coreURL = CORE_URL;\r\n        // when web worker type is `classic`.\r\n        importScripts(_coreURL);\r\n    }\r\n    catch {\r\n        if (!_coreURL || _coreURL === CORE_URL)\r\n            _coreURL = CORE_URL.replace(\'/umd/\', \'/esm/\');\r\n        // when web worker type is `module`.\r\n        self.createFFmpegCore = (await import(\r\n        /* @vite-ignore */ /* webpackIgnore: true */ _coreURL)).default;\r\n        if (!self.createFFmpegCore) {\r\n            throw ERROR_IMPORT_FAILURE;\r\n        }\r\n    }\r\n    const coreURL = _coreURL;\r\n    const wasmURL = _wasmURL ? _wasmURL : _coreURL.replace(/.js$/g, ".wasm");\r\n    const workerURL = _workerURL\r\n        ? _workerURL\r\n        : _coreURL.replace(/.js$/g, ".worker.js");\r\n    ffmpeg = await self.createFFmpegCore({\r\n        // Fix `Overload resolution failed.` when using multi-threaded ffmpeg-core.\r\n        // Encoded wasmURL and workerURL in the URL as a hack to fix locateFile issue.\r\n        mainScriptUrlOrBlob: `${coreURL}#${btoa(JSON.stringify({ wasmURL, workerURL }))}`,\r\n    });\r\n    ffmpeg.setLogger((data) => self.postMessage({ type: FFMessageType.LOG, data }));\r\n    ffmpeg.setProgress((data) => self.postMessage({\r\n        type: FFMessageType.PROGRESS,\r\n        data,\r\n    }));\r\n    return first;\r\n};\r\nconst exec = ({ args, timeout = -1 }) => {\r\n    ffmpeg.setTimeout(timeout);\r\n    ffmpeg.exec(...args);\r\n    const ret = ffmpeg.ret;\r\n    ffmpeg.reset();\r\n    return ret;\r\n};\r\nconst ffprobe = ({ args, timeout = -1 }) => {\r\n    ffmpeg.setTimeout(timeout);\r\n    ffmpeg.ffprobe(...args);\r\n    const ret = ffmpeg.ret;\r\n    ffmpeg.reset();\r\n    return ret;\r\n};\r\nconst writeFile = ({ path, data }) => {\r\n    ffmpeg.FS.writeFile(path, data);\r\n    return true;\r\n};\r\nconst readFile = ({ path, encoding }) => ffmpeg.FS.readFile(path, { encoding });\r\n// TODO: check if deletion works.\r\nconst deleteFile = ({ path }) => {\r\n    ffmpeg.FS.unlink(path);\r\n    return true;\r\n};\r\nconst rename = ({ oldPath, newPath }) => {\r\n    ffmpeg.FS.rename(oldPath, newPath);\r\n    return true;\r\n};\r\n// TODO: check if creation works.\r\nconst createDir = ({ path }) => {\r\n    ffmpeg.FS.mkdir(path);\r\n    return true;\r\n};\r\nconst listDir = ({ path }) => {\r\n    const names = ffmpeg.FS.readdir(path);\r\n    const nodes = [];\r\n    for (const name of names) {\r\n        const stat = ffmpeg.FS.stat(`${path}/${name}`);\r\n        const isDir = ffmpeg.FS.isDir(stat.mode);\r\n        nodes.push({ name, isDir });\r\n    }\r\n    return nodes;\r\n};\r\n// TODO: check if deletion works.\r\nconst deleteDir = ({ path }) => {\r\n    ffmpeg.FS.rmdir(path);\r\n    return true;\r\n};\r\nconst mount = ({ fsType, options, mountPoint }) => {\r\n    const str = fsType;\r\n    const fs = ffmpeg.FS.filesystems[str];\r\n    if (!fs)\r\n        return false;\r\n    ffmpeg.FS.mount(fs, options, mountPoint);\r\n    return true;\r\n};\r\nconst unmount = ({ mountPoint }) => {\r\n    ffmpeg.FS.unmount(mountPoint);\r\n    return true;\r\n};\r\nself.onmessage = async ({ data: { id, type, data: _data }, }) => {\r\n    const trans = [];\r\n    let data;\r\n    try {\r\n        if (type !== FFMessageType.LOAD && !ffmpeg)\r\n            throw ERROR_NOT_LOADED; // eslint-disable-line\r\n        switch (type) {\r\n            case FFMessageType.LOAD:\r\n                data = await load(_data);\r\n                break;\r\n            case FFMessageType.EXEC:\r\n                data = exec(_data);\r\n                break;\r\n            case FFMessageType.FFPROBE:\r\n                data = ffprobe(_data);\r\n                break;\r\n            case FFMessageType.WRITE_FILE:\r\n                data = writeFile(_data);\r\n                break;\r\n            case FFMessageType.READ_FILE:\r\n                data = readFile(_data);\r\n                break;\r\n            case FFMessageType.DELETE_FILE:\r\n                data = deleteFile(_data);\r\n                break;\r\n            case FFMessageType.RENAME:\r\n                data = rename(_data);\r\n                break;\r\n            case FFMessageType.CREATE_DIR:\r\n                data = createDir(_data);\r\n                break;\r\n            case FFMessageType.LIST_DIR:\r\n                data = listDir(_data);\r\n                break;\r\n            case FFMessageType.DELETE_DIR:\r\n                data = deleteDir(_data);\r\n                break;\r\n            case FFMessageType.MOUNT:\r\n                data = mount(_data);\r\n                break;\r\n            case FFMessageType.UNMOUNT:\r\n                data = unmount(_data);\r\n                break;\r\n            default:\r\n                throw ERROR_UNKNOWN_MESSAGE_TYPE;\r\n        }\r\n    }\r\n    catch (e) {\r\n        self.postMessage({\r\n            id,\r\n            type: FFMessageType.ERROR,\r\n            data: e.toString(),\r\n        });\r\n        return;\r\n    }\r\n    if (data instanceof Uint8Array) {\r\n        trans.push(data.buffer);\r\n    }\r\n    self.postMessage({ id, type, data }, trans);\r\n};\r\n',
+    expected: '/// <reference no-default-lib="true" />\n/// <reference lib="esnext" />\n/// <reference lib="webworker" />\nimport { CORE_URL, FFMessageType } from "./const.js";\nimport { ERROR_UNKNOWN_MESSAGE_TYPE, ERROR_NOT_LOADED, ERROR_IMPORT_FAILURE, } from "./errors.js";\nlet ffmpeg;\nconst load = async ({ coreURL: _coreURL, wasmURL: _wasmURL, workerURL: _workerURL, }) => {\n    const first = !ffmpeg;\n    try {\n        if (!_coreURL)\n            _coreURL = CORE_URL;\n        // when web worker type is `classic`.\n        importScripts(_coreURL);\n    }\n    catch {\n        if (!_coreURL || _coreURL === CORE_URL)\n            _coreURL = CORE_URL.replace(\'/umd/\', \'/esm/\');\n        // when web worker type is `module`.\n        self.createFFmpegCore = (await import(\n        /* @vite-ignore */ _coreURL)).default;\n        if (!self.createFFmpegCore) {\n            throw ERROR_IMPORT_FAILURE;\n        }\n    }\n    const coreURL = _coreURL;\n    const wasmURL = _wasmURL ? _wasmURL : _coreURL.replace(/.js$/g, ".wasm");\n    const workerURL = _workerURL\n        ? _workerURL\n        : _coreURL.replace(/.js$/g, ".worker.js");\n    ffmpeg = await self.createFFmpegCore({\n        // Fix `Overload resolution failed.` when using multi-threaded ffmpeg-core.\n        // Encoded wasmURL and workerURL in the URL as a hack to fix locateFile issue.\n        mainScriptUrlOrBlob: `${coreURL}#${btoa(JSON.stringify({ wasmURL, workerURL }))}`,\n    });\n    ffmpeg.setLogger((data) => self.postMessage({ type: FFMessageType.LOG, data }));\n    ffmpeg.setProgress((data) => self.postMessage({\n        type: FFMessageType.PROGRESS,\n        data,\n    }));\n    return first;\n};\nconst exec = ({ args, timeout = -1 }) => {\n    ffmpeg.setTimeout(timeout);\n    ffmpeg.exec(...args);\n    const ret = ffmpeg.ret;\n    ffmpeg.reset();\n    return ret;\n};\nconst ffprobe = ({ args, timeout = -1 }) => {\n    ffmpeg.setTimeout(timeout);\n    ffmpeg.ffprobe(...args);\n    const ret = ffmpeg.ret;\n    ffmpeg.reset();\n    return ret;\n};\nconst writeFile = ({ path, data }) => {\n    ffmpeg.FS.writeFile(path, data);\n    return true;\n};\nconst readFile = ({ path, encoding }) => ffmpeg.FS.readFile(path, { encoding });\n// TODO: check if deletion works.\nconst deleteFile = ({ path }) => {\n    ffmpeg.FS.unlink(path);\n    return true;\n};\nconst rename = ({ oldPath, newPath }) => {\n    ffmpeg.FS.rename(oldPath, newPath);\n    return true;\n};\n// TODO: check if creation works.\nconst createDir = ({ path }) => {\n    ffmpeg.FS.mkdir(path);\n    return true;\n};\nconst listDir = ({ path }) => {\n    const names = ffmpeg.FS.readdir(path);\n    const nodes = [];\n    for (const name of names) {\n        const stat = ffmpeg.FS.stat(`${path}/${name}`);\n        const isDir = ffmpeg.FS.isDir(stat.mode);\n        nodes.push({ name, isDir });\n    }\n    return nodes;\n};\n// TODO: check if deletion works.\nconst deleteDir = ({ path }) => {\n    ffmpeg.FS.rmdir(path);\n    return true;\n};\nconst mount = ({ fsType, options, mountPoint }) => {\n    const str = fsType;\n    const fs = ffmpeg.FS.filesystems[str];\n    if (!fs)\n        return false;\n    ffmpeg.FS.mount(fs, options, mountPoint);\n    return true;\n};\nconst unmount = ({ mountPoint }) => {\n    ffmpeg.FS.unmount(mountPoint);\n    return true;\n};\nself.onmessage = async ({ data: { id, type, data: _data }, }) => {\n    const trans = [];\n    let data;\n    try {\n        if (type !== FFMessageType.LOAD && !ffmpeg)\n            throw ERROR_NOT_LOADED; // eslint-disable-line\n        switch (type) {\n            case FFMessageType.LOAD:\n                data = await load(_data);\n                break;\n            case FFMessageType.EXEC:\n                data = exec(_data);\n                break;\n            case FFMessageType.FFPROBE:\n                data = ffprobe(_data);\n                break;\n            case FFMessageType.WRITE_FILE:\n                data = writeFile(_data);\n                break;\n            case FFMessageType.READ_FILE:\n                data = readFile(_data);\n                break;\n            case FFMessageType.DELETE_FILE:\n                data = deleteFile(_data);\n                break;\n            case FFMessageType.RENAME:\n                data = rename(_data);\n                break;\n            case FFMessageType.CREATE_DIR:\n                data = createDir(_data);\n                break;\n            case FFMessageType.LIST_DIR:\n                data = listDir(_data);\n                break;\n            case FFMessageType.DELETE_DIR:\n                data = deleteDir(_data);\n                break;\n            case FFMessageType.MOUNT:\n                data = mount(_data);\n                break;\n            case FFMessageType.UNMOUNT:\n                data = unmount(_data);\n                break;\n            default:\n                throw ERROR_UNKNOWN_MESSAGE_TYPE;\n        }\n    }\n    catch (e) {\n        self.postMessage({\n            id,\n            type: FFMessageType.ERROR,\n            data: e.toString(),\n        });\n        return;\n    }\n    if (data instanceof Uint8Array) {\n        trans.push(data.buffer);\n    }\n    self.postMessage({ id, type, data }, trans);\n};\n',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

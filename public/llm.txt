@@ -1,0 +1,100 @@
+# FrameLab - Free Online Screenshot Editor
+
+## About
+FrameLab is a free, open-source, browser-based screenshot editor that transforms plain screenshots into professional-quality graphics. Editing runs in your browser: imported images are not uploaded to edit them, and export compression round-trips the finished image through the server without storing it. No signup, no watermarks, no downloads required.
+
+## Core Features
+- **100+ Backgrounds** — Gradients, mesh, radiant, paper textures, patterns, solid colors
+- **Browser Mockups** — Safari and Chrome frames (light and dark mode), Arc browser
+- **Device Frames** — macOS, Polaroid, glass, outline, border
+- **3D Effects** — Perspective transforms, rotation, tilt, depth-of-field
+- **Animation Timeline** — 20+ animation presets (zoom, pan, Ken Burns, tilt, fade, bounce, slide)
+- **Video Export** — MP4, WebM, GIF via FFmpeg WASM (runs in browser)
+- **Text Overlays** — 27+ Google Fonts, custom styling, shadows, positioning
+- **Tweet Import** — Convert tweets to images by URL
+- **Code Snippets** — Syntax-highlighted code to image
+- **High-Res Export** — PNG, JPEG, WebP up to 5x resolution
+- **Templates & Presets** — One-click professional styling
+
+## Pages
+- Start (choose a tool): /
+- Screenshot Editor: /editor
+- Landing: /landing
+- Free Screenshot Editor: /free-screenshot-editor
+- Mockup Generator: /mockup-generator
+- Code to Image: /code
+- Features: /features
+- Screenshot Beautifier: /features/screenshot-beautifier
+- Social Media Graphics: /features/social-media-graphics
+- Animation Maker: /features/animation-maker
+- 3D Effects: /features/3d-effects
+- Browser Mockups: /features/browser-mockups
+- For Developers: /for/developers
+- For Marketers: /for/marketers
+- For Designers: /for/designers
+- vs Pika Style: /compare/pika-style
+- vs Shots.so: /compare/shots-so
+- vs Snagit: /compare/snagit
+- Guides: /guides
+- Best Free Screenshot Mockup Generators: /guides/best-free-screenshot-mockup-generators
+- Best Free Screenshot Editors With No Watermark: /guides/best-free-screenshot-editors-no-watermark
+- Best Code to Image Tools: /guides/best-code-to-image-tools
+- Best Free Shots.so Alternatives: /guides/best-free-shots-so-alternatives
+- API Documentation: /docs
+- API Authentication: /docs/authentication
+- Developer Portal: /developers
+- Changelog: /changelog
+- About: /about
+- Contact: /contact
+- Privacy Policy: /privacy-policy
+- Terms: /terms
+
+## Developer Resources
+- API documentation: /docs
+- Developer portal: /developers
+- OpenAPI 3.1 specification: /openapi.json
+- Authentication and rate limits: /docs/authentication
+- Agent index: /llms.txt
+- Full agent reference: /llms-full.txt
+- Sitemap: /sitemap.xml
+
+The public API needs no API key. Every page also serves Markdown to clients that
+send `Accept: text/markdown`. No official CLI tool and no MCP server are published yet.
+
+## Languages
+Available in 8 languages: English, Spanish (/es), French (/fr), German (/de), Japanese (/ja), Portuguese (/pt), Korean (/ko), Chinese (/zh).
+
+## Technology Stack
+- Next.js 16 with App Router
+- React 19
+- TypeScript
+- HTML Canvas with modern-screenshot
+- Cloudflare R2 for asset storage
+- Tailwind CSS, Radix UI
+- Zustand for state management
+- FFmpeg WASM for video encoding
+- next-intl for internationalization
+
+## Use Cases
+- Social media graphics (Twitter/X, Instagram, LinkedIn, Product Hunt)
+- SaaS product screenshots for landing pages and documentation
+- Developer portfolio and project showcase images
+- Marketing presentations and pitch decks
+- Animated slideshows and video content
+
+## Target Audience
+Developers, designers, marketers, indie hackers, content creators, and anyone who needs professional visuals without design skills.
+
+## Pricing
+100% free. No signup, no watermarks, no hidden costs, no premium tier. Unlimited exports with full feature access.
+
+## Contact
+- Website: /
+- Twitter/X: https://x.com/L0kiLabs
+- GitHub: https://github.com/Lok1Labs
+- Contact Developer: https://t.me/VolkovSmirnov
+- Development updates: https://t.me/ErrorEater
+
+## LLMs.txt
+For structured markdown documentation, visit: /llms.txt
+For the full detailed version: /llms-full.txt

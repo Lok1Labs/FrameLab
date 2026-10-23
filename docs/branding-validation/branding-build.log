@@ -1,0 +1,323 @@
+
+> screenshot-studio@0.1.0 build
+> npx prisma generate && next build --webpack
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma config detected, skipping environment variable loading.
+Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (v6.19.2) to .\node_modules\@prisma\client in 66ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+
+▲ Next.js 16.1.6 (webpack)
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+⚠ Compiled with warnings in 43s
+
+./node_modules/@huggingface/transformers/dist/transformers.web.js
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+./node_modules/@huggingface/transformers/dist/transformers.web.js
+./lib/background-removal/engine.worker.ts
+./lib/background-removal/client.ts
+./lib/background-removal/index.ts
+./components/remove-background/RemoveBackgroundApp.tsx
+./components/remove-background/RemoveBackgroundLoader.tsx
+
+Circular dependency between chunks with runtime (5029, webpack, 9737)
+This prevents using hashes of each other and should be avoided.
+
+Circular dependency between chunks with runtime (6952, webpack-runtime, 9437)
+This prevents using hashes of each other and should be avoided.
+
+  Running TypeScript ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/622) ...
+  Generating static pages using 7 workers (155/622) 
+  Generating static pages using 7 workers (310/622) 
+  Generating static pages using 7 workers (466/622) 
+✓ Generating static pages using 7 workers (622/622) in 6.4s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]
+│ ├ /en
+│ ├ /es
+│ ├ /fr
+│ └ [+5 more paths]
+├ ● /[locale]/about
+│ ├ /en/about
+│ ├ /es/about
+│ ├ /fr/about
+│ └ [+5 more paths]
+├ ● /[locale]/avif-to-jpg
+│ ├ /en/avif-to-jpg
+│ ├ /es/avif-to-jpg
+│ ├ /fr/avif-to-jpg
+│ └ [+5 more paths]
+├ ● /[locale]/avif-to-png
+│ ├ /en/avif-to-png
+│ ├ /es/avif-to-png
+│ ├ /fr/avif-to-png
+│ └ [+5 more paths]
+├ ● /[locale]/avif-to-webp
+│ ├ /en/avif-to-webp
+│ ├ /es/avif-to-webp
+│ ├ /fr/avif-to-webp
+│ └ [+5 more paths]
+├ ● /[locale]/changelog
+│ ├ /en/changelog
+│ ├ /es/changelog
+│ ├ /fr/changelog
+│ └ [+5 more paths]
+├ ● /[locale]/code
+│ ├ /en/code
+│ ├ /es/code
+│ ├ /fr/code
+│ └ [+5 more paths]
+├ ● /[locale]/compare
+│ ├ /en/compare
+│ ├ /es/compare
+│ ├ /fr/compare
+│ └ [+5 more paths]
+├ ● /[locale]/compare/[slug]
+│ ├ /en/compare/pika-style
+│ ├ /en/compare/shots-so
+│ ├ /en/compare/snagit
+│ └ [+69 more paths]
+├ ● /[locale]/compress-image
+│ ├ /en/compress-image
+│ ├ /es/compress-image
+│ ├ /fr/compress-image
+│ └ [+5 more paths]
+├ ● /[locale]/compress-video
+│ ├ /en/compress-video
+│ ├ /es/compress-video
+│ ├ /fr/compress-video
+│ └ [+5 more paths]
+├ ● /[locale]/contact
+│ ├ /en/contact
+│ ├ /es/contact
+│ ├ /fr/contact
+│ └ [+5 more paths]
+├ ● /[locale]/convert-image
+│ ├ /en/convert-image
+│ ├ /es/convert-image
+│ ├ /fr/convert-image
+│ └ [+5 more paths]
+├ ● /[locale]/crop-image
+│ ├ /en/crop-image
+│ ├ /es/crop-image
+│ ├ /fr/crop-image
+│ └ [+5 more paths]
+├ ● /[locale]/developers
+│ ├ /en/developers
+│ ├ /es/developers
+│ ├ /fr/developers
+│ └ [+5 more paths]
+├ ● /[locale]/docs
+│ ├ /en/docs
+│ ├ /es/docs
+│ ├ /fr/docs
+│ └ [+5 more paths]
+├ ● /[locale]/docs/authentication
+│ ├ /en/docs/authentication
+│ ├ /es/docs/authentication
+│ ├ /fr/docs/authentication
+│ └ [+5 more paths]
+├ ● /[locale]/editor
+│ ├ /en/editor
+│ ├ /es/editor
+│ ├ /fr/editor
+│ └ [+5 more paths]
+├ ● /[locale]/features
+│ ├ /en/features
+│ ├ /es/features
+│ ├ /fr/features
+│ └ [+5 more paths]
+├ ● /[locale]/features/3d-effects
+│ ├ /en/features/3d-effects
+│ ├ /es/features/3d-effects
+│ ├ /fr/features/3d-effects
+│ └ [+5 more paths]
+├ ● /[locale]/features/animation-maker
+│ ├ /en/features/animation-maker
+│ ├ /es/features/animation-maker
+│ ├ /fr/features/animation-maker
+│ └ [+5 more paths]
+├ ● /[locale]/features/browser-mockups
+│ ├ /en/features/browser-mockups
+│ ├ /es/features/browser-mockups
+│ ├ /fr/features/browser-mockups
+│ └ [+5 more paths]
+├ ● /[locale]/features/code-snippets
+│ ├ /en/features/code-snippets
+│ ├ /es/features/code-snippets
+│ ├ /fr/features/code-snippets
+│ └ [+5 more paths]
+├ ● /[locale]/features/screenshot-beautifier
+│ ├ /en/features/screenshot-beautifier
+│ ├ /es/features/screenshot-beautifier
+│ ├ /fr/features/screenshot-beautifier
+│ └ [+5 more paths]
+├ ● /[locale]/features/social-media-graphics
+│ ├ /en/features/social-media-graphics
+│ ├ /es/features/social-media-graphics
+│ ├ /fr/features/social-media-graphics
+│ └ [+5 more paths]
+├ ● /[locale]/for
+│ ├ /en/for
+│ ├ /es/for
+│ ├ /fr/for
+│ └ [+5 more paths]
+├ ● /[locale]/for/designers
+│ ├ /en/for/designers
+│ ├ /es/for/designers
+│ ├ /fr/for/designers
+│ └ [+5 more paths]
+├ ● /[locale]/for/developers
+│ ├ /en/for/developers
+│ ├ /es/for/developers
+│ ├ /fr/for/developers
+│ └ [+5 more paths]
+├ ● /[locale]/for/marketers
+│ ├ /en/for/marketers
+│ ├ /es/for/marketers
+│ ├ /fr/for/marketers
+│ └ [+5 more paths]
+├ ● /[locale]/free-screenshot-editor
+│ ├ /en/free-screenshot-editor
+│ ├ /es/free-screenshot-editor
+│ ├ /fr/free-screenshot-editor
+│ └ [+5 more paths]
+├ ● /[locale]/guides
+│ ├ /en/guides
+│ ├ /es/guides
+│ ├ /fr/guides
+│ └ [+5 more paths]
+├ ● /[locale]/guides/[slug]
+│ ├ /en/guides/how-to-edit-screenshot-online
+│ ├ /en/guides/how-to-add-text-to-screenshot
+│ ├ /en/guides/how-to-blur-screenshot
+│ └ [+141 more paths]
+├ ● /[locale]/jpg-to-avif
+│ ├ /en/jpg-to-avif
+│ ├ /es/jpg-to-avif
+│ ├ /fr/jpg-to-avif
+│ └ [+5 more paths]
+├ ● /[locale]/jpg-to-png
+│ ├ /en/jpg-to-png
+│ ├ /es/jpg-to-png
+│ ├ /fr/jpg-to-png
+│ └ [+5 more paths]
+├ ● /[locale]/jpg-to-webp
+│ ├ /en/jpg-to-webp
+│ ├ /es/jpg-to-webp
+│ ├ /fr/jpg-to-webp
+│ └ [+5 more paths]
+├ ● /[locale]/landing
+│ ├ /en/landing
+│ ├ /es/landing
+│ ├ /fr/landing
+│ └ [+5 more paths]
+├ ● /[locale]/mockup-generator
+│ ├ /en/mockup-generator
+│ ├ /es/mockup-generator
+│ ├ /fr/mockup-generator
+│ └ [+5 more paths]
+├ ● /[locale]/png-to-avif
+│ ├ /en/png-to-avif
+│ ├ /es/png-to-avif
+│ ├ /fr/png-to-avif
+│ └ [+5 more paths]
+├ ● /[locale]/png-to-jpg
+│ ├ /en/png-to-jpg
+│ ├ /es/png-to-jpg
+│ ├ /fr/png-to-jpg
+│ └ [+5 more paths]
+├ ● /[locale]/png-to-webp
+│ ├ /en/png-to-webp
+│ ├ /es/png-to-webp
+│ ├ /fr/png-to-webp
+│ └ [+5 more paths]
+├ ● /[locale]/privacy-policy
+│ ├ /en/privacy-policy
+│ ├ /es/privacy-policy
+│ ├ /fr/privacy-policy
+│ └ [+5 more paths]
+├ ● /[locale]/remove-background
+│ ├ /en/remove-background
+│ ├ /es/remove-background
+│ ├ /fr/remove-background
+│ └ [+5 more paths]
+├ ● /[locale]/resize-image
+│ ├ /en/resize-image
+│ ├ /es/resize-image
+│ ├ /fr/resize-image
+│ └ [+5 more paths]
+├ ● /[locale]/rotate-image
+│ ├ /en/rotate-image
+│ ├ /es/rotate-image
+│ ├ /fr/rotate-image
+│ └ [+5 more paths]
+├ ƒ /[locale]/store-screenshots
+├ ● /[locale]/terms
+│ ├ /en/terms
+│ ├ /es/terms
+│ ├ /fr/terms
+│ └ [+5 more paths]
+├ ● /[locale]/tools
+│ ├ /en/tools
+│ ├ /es/tools
+│ ├ /fr/tools
+│ └ [+5 more paths]
+├ ● /[locale]/tweet
+│ ├ /en/tweet
+│ ├ /es/tweet
+│ ├ /fr/tweet
+│ └ [+5 more paths]
+├ ● /[locale]/webp-to-avif
+│ ├ /en/webp-to-avif
+│ ├ /es/webp-to-avif
+│ ├ /fr/webp-to-avif
+│ └ [+5 more paths]
+├ ● /[locale]/webp-to-jpg
+│ ├ /en/webp-to-jpg
+│ ├ /es/webp-to-jpg
+│ ├ /fr/webp-to-jpg
+│ └ [+5 more paths]
+├ ● /[locale]/webp-to-png
+│ ├ /en/webp-to-png
+│ ├ /es/webp-to-png
+│ ├ /fr/webp-to-png
+│ └ [+5 more paths]
+├ ƒ /api/[...unmatched]
+├ ƒ /api/cleanup-cache
+├ ƒ /api/export
+├ ƒ /api/image-proxy
+├ ƒ /api/indexnow
+├ ƒ /api/llms
+├ ƒ /api/llms-full
+├ ƒ /api/md
+├ ○ /api/openapi
+├ ƒ /api/screenshot
+├ ƒ /api/screenshot/invalidate
+├ ƒ /api/tweet/[id]
+├ ○ /robots.txt
+└ ○ /sitemap.xml
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
