@@ -1,0 +1,2 @@
+# Vendored worker files must match the installed npm package on Windows too.
+public/ffmpeg/** text eol=lf

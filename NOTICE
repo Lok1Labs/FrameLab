@@ -1,0 +1,8 @@
+FrameLab
+Built & maintained by L0kiLabs.
+
+Based on Screenshot Studio (https://github.com/opennookorg/screenshot-studio),
+created by Kartik Labhshetwar and contributors, licensed under Apache-2.0.
+The original LICENSE is preserved unchanged. Original legal page source snapshots
+are retained in docs/upstream-legal for provenance, not as current FrameLab contacts.
+Changes: FrameLab branding, supplied artwork, metadata and maintainer links.
